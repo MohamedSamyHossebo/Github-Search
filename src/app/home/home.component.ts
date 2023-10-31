@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
       .subscribe(res => {
         this.user = [res];
         this.searchTextChanged.emit(this.username);
-        console.log(this.user);
       }, // Handling the error here
         err => {
           console.error('ann error ocuured', err)
