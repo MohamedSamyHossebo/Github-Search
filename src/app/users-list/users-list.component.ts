@@ -18,7 +18,6 @@ export class UsersListComponent implements OnInit {
     //Using UserService to get Users List From the API
     this._service.getAllUsers().subscribe(res => {
       this.allUsers = res;
-      console.log(this.allUsers);
     }, // Handling the error here
       err => {
         console.error('an error ocurred', err)
