@@ -1,0 +1,26 @@
+<div class="row">
+    <h2 class="text-center text-light fst-italic">GitHub Search Engine</h2>
+    <div class="d-flex justify-content-center m-1" routerLink="/userslist">
+        <button class=" btn btn-secondary badge">Show UsersList<a class="btn-danger"></a></button>
+    </div>
+    <form action="" class="searchForm">
+        <div class="form-group d-flex justify-content-center m-5">
+            <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone:true}" (keyup)="getUserInfo()"
+                placeholder="Search GitHub Users" id="search">
+        </div>
+    </form>
+    <div class="col-md-12">
+        <div class="card h-100 m-auto" *ngFor="let singleuser of user">
+            <img [src]="singleuser.avatar_url" class="card-img-top" alt="avatar_url">
+            <div class="card-body">
+                <h5 class="card-title fa">{{singleuser.login}}</h5>
+                <p class="card-text">Bio:<span class="badge text-bg-dark ">{{singleuser.bio}}</span></p>
+            </div>
+            <div class="card-footer">
+                <p class="text-body-secondary badge">Location: {{singleuser.location}}</p>
+                <p class="text-body-secondary badge">Name: {{singleuser.name}}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>

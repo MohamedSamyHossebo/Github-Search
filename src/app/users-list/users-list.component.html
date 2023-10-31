@@ -1,0 +1,12 @@
+<div class="row" *ngIf="allUsers">
+<div class="col-md-4 g-4"*ngFor="let allusers of allUsers" >
+    <div class="col">
+        <div class="card h-100">
+            <img [src]="allusers.avatar_url" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{allusers.login}}</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, repellat.</p>
+            </div>
+        </div>
+    </div>
+</div>
